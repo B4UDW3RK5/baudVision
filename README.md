@@ -1,2 +1,17 @@
-# baudVision
-Underground AV club
+```
+                       '             .
+                       |                  ,
+                     __|_ .        .
+                       |       ___________
+                      ________╱     ╱     ╲
+                  ,  ╱       ╱            ╱                     b a u d V i s i o n
+                    ╱        ╲           ╱ .             Underground AV Club  ·  Est. 2020
+                   ╱         ╱╲         ╱
+                   ╲________╱  ╲_______╱
+
+                      . . .      _|_    .
+                        .         |   .
+                        :         .   
+
+                                  :
+```
