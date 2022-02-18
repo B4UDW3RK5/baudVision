@@ -1,0 +1,3 @@
+#!/bin/sh
+
+vlc -I dummy --control dbus /var/vcr/stream.vlc --loop --sout-keep --sout '#standard{access=http,mux=ts,dst=baud.vision:21225}'

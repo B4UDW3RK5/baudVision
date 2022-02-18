@@ -1,0 +1,46 @@
+#!/bin/bash
+
+while :
+do
+   echo "["`date`"] Regenerating playlist..."
+   #start a new playlist with a bumper
+   ls -a1 /mnt/volume_sgp1_04/baudVision/bumpers/*.mp4 | shuf | head -n 1 > /var/vcr/stream.vlc
+   #three shorts
+   ls -a1 /mnt/volume_sgp1_04/baudVision/short/*.mp4 | shuf | head -n 3 >> /var/vcr/stream.vlc
+   #bumper
+   ls -a1 /mnt/volume_sgp1_04/baudVision/bumpers/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   #one medium
+   ls -a1 /mnt/volume_sgp1_04/baudVision/medium/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   #bumper
+   ls -a1 /mnt/volume_sgp1_04/baudVision/bumpers/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   #one movie
+   ls -a1 /mnt/volume_sgp1_04/baudVision/movies/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   #bumper
+   ls -a1 /mnt/volume_sgp1_04/baudVision/bumpers/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   #three shorts
+   ls -a1 /mnt/volume_sgp1_04/baudVision/short/*.mp4 | shuf | head -n 3 >> /var/vcr/stream.vlc
+   #bumper
+   ls -a1 /mnt/volume_sgp1_04/baudVision/bumpers/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   #nine videos
+   ls -a1 /mnt/volume_sgp1_04/baudVision/music/videos/*.mp4 | shuf | head -n 9 >> /var/vcr/stream.vlc
+   #bumper
+   ls -a1 /mnt/volume_sgp1_04/baudVision/bumpers/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   #one music
+   ls -a1 /mnt/volume_sgp1_04/baudVision/music/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   #bumper
+   ls -a1 /mnt/volume_sgp1_04/baudVision/bumpers/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   #three shorts
+   ls -a1 /mnt/volume_sgp1_04/baudVision/short/*.mp4 | shuf | head -n 3 >> /var/vcr/stream.vlc
+   #bumper
+   ls -a1 /mnt/volume_sgp1_04/baudVision/bumpers/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   #one medium
+   ls -a1 /mnt/volume_sgp1_04/baudVision/medium/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   #bumper
+   ls -a1 /mnt/volume_sgp1_04/baudVision/bumpers/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   #one long
+   ls -a1 /mnt/volume_sgp1_04/baudVision/long/*.mp4 | shuf | head -n 1 >> /var/vcr/stream.vlc
+   # reload playlist at the end
+   echo "/var/vcr/stream.vlc" >> /var/vcr/stream.vlc
+   cat /var/vcr/stream.vlc
+   sleep 3
+done

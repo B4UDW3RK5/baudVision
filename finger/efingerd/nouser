@@ -1,0 +1,15 @@
+#!/bin/sh
+
+#. /etc/efingerd/log 
+
+if [ "$3" = "nowplaying" ]; then
+   cat /var/finger/nowplaying
+   exit 0
+fi
+
+if [ "$3" = "info" ]; then
+   cat /var/finger/info
+   exit 0
+fi
+
+echo "Nothing."

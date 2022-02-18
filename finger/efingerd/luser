@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#. /etc/efingerd/log
+
+if [ "$3" = "cat" ]; then
+   echo "Are you looking for cat@baud.baby?"
+   exit 0
+fi
+
+echo "Nothing."
