@@ -42,5 +42,5 @@ do
    # reload playlist at the end
    echo "/var/vcr/stream.vlc" >> /var/vcr/stream.vlc
    cat /var/vcr/stream.vlc
-   sleep 3
+   sleep 1h
 done

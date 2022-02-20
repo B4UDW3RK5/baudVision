@@ -3,11 +3,11 @@
 while :
 do
    VLC=$(qdbus org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Metadata | tail -n 2 | head -n 1 | cut -c 14-)
-   FINGER=$(cat /var/finger/nowplaying)
+   FINGER=$(cat /var/common/nowplaying)
    if [ "$VLC" != "$FINGER" ]
    then
-      cp /var/finger/nowplaying /var/finger/lastplayed
-      echo $VLC > /var/finger/nowplaying
+      cp /var/common/nowplaying /var/common/lastplayed
+      echo $VLC > /var/common/nowplaying
       echo "["`date`"]" $VLC
    fi
    sleep 3
