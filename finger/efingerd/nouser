@@ -3,12 +3,12 @@
 #. /etc/efingerd/log 
 
 if [ "$3" = "nowplaying" ]; then
-   cat /var/finger/nowplaying
+   cat /var/common/nowplaying
    exit 0
 fi
 
 if [ "$3" = "info" ]; then
-   cat /var/finger/info
+   cat /var/common/info
    exit 0
 fi
 
