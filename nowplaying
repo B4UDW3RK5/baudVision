@@ -2,7 +2,7 @@
 
 while :
 do
-   VLC=$(qdbus org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Metadata | tail -n 2 | head -n 1 | cut -c 14-)
+   VLC=$(qdbus org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Metadata | grep xesam:title: | cut -c 14-)
    FINGER=$(cat /var/common/nowplaying)
    if [ "$VLC" != "$FINGER" ]
    then
