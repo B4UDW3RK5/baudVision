@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cat /var/common/header | sed -e 's/^/[i|/;s/$/|\/|baud.vision|70]/' && echo "\r"
+echo "[i|› README|/|baud.vision|70]"
+echo "[i||/|baud.vision|70]"
+cat /var/common/readme | sed -e 's/^/   /' | fold -w 67 -s | sed -e 's/^/[i|/;s/ $//g;s/$/|\/|baud.vision\|70]/' && echo "\r"
+echo "[i|› NOWPLAYING|/|baud.vision|70]"
